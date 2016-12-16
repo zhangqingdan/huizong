@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>flex</title>
+	<style>
+body{
+	display: flex;
+  	flex-wrap:wrap;
+
+
+}
+div{
+	
+	display: flex;
+	box-sizing:border-box;
+	font-size: 40px;
+	flex-direction:column;
+	margin: 50px;
+	padding: 10px;
+
+
+}
+.flex{
+
+	display: flex;
+	height: 150px;
+	min-width: 150px;
+	background: #e7e7e7;
+  	border-radius: 10%;
+	box-shadow:
+    	inset 0 5px white, 
+    	inset 0 -5px #bbb,
+    	inset 5px 0 #d7d7d7, 
+    	inset -5px 0 #d7d7d7;
+}
+#one{
+	display: flex;
+	justify-content:center;
+	align-items:center;
+}
+#two{
+	display: flex;
+	flex-direction: column;
+  	justify-content: space-between;
+}
+#two span:nth-child(2){
+  	align-self: flex-end;
+}
+#three{
+	display: flex;
+	flex-direction: column;
+  	justify-content: space-between;
+}
+#three span:nth-child(2){
+  	align-self: center;
+}
+#three span:nth-child(3){
+  	align-self: flex-end;
+}
+#four{
+	display: flex;
+	flex-direction: column;
+  	justify-content: space-between;
+  	flex-wrap: wrap;
+}
+#four span:nth-child(3){
+  	align-self: flex-end;
+}
+#four span:nth-child(4){
+  	align-self: flex-end;
+}
+#five{
+	display: flex;
+	flex-direction: column;
+  	justify-content: space-between;
+  	flex-wrap: wrap;
+
+}
+#five .flex_five{
+	padding: 0;
+	margin: 0;
+  	justify-content: space-between;
+	height: 100%
+}
+#five .flex_five:nth-child(2){
+	justify-content:center;
+}
+
+#six{
+	display: flex;
+	flex-direction: column;
+  	justify-content: space-between;
+  	flex-wrap: wrap;
+
+}
+
+	</style>
+</head>
+<body>
+	<div id='one' class='flex'>
+		<span>●</span>
+	</div>
+	<div id='two' class='flex'>
+		<span>●</span>
+		<span>●</span>
+	</div>
+	<div id='three' class='flex'>
+		<span>●</span>
+		<span>●</span>
+		<span>●</span>
+	</div>
+	<div id='four' class='flex'>
+		<span>●</span>
+		<span>●</span>
+		<span>●</span>
+		<span>●</span>
+	</div>
+	<div id='five' class='flex'>
+		<div class='flex_five'>
+			<span>●</span>
+			<span>●</span>
+		</div>
+		<div class='flex_five'>
+			<span>●</span>
+		</div>
+		<div class='flex_five'>
+			<span>●</span>
+			<span>●</span>
+		</div>
+	</div>
+	<div id='six' class='flex'>
+		<span>●</span>
+		<span>●</span>
+		<span>●</span>
+		<span>●</span>
+		<span>●</span>
+		<span>●</span>
+	</div>
+
+	
+</body>
+</html>

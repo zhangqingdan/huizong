@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="bootstrap.min.css">
+	<style>
+
+		
+		#myCarousel {
+			margin: 100px 0 0 0;
+		}
+		
+		.carousel-inner img {
+			margin: 0 auto;
+		}
+		.carousel-control {
+			font-size: 100px;
+		}
+	</style>
+
+</head>
+<body>
+
+
+	<div id="myCarousel" class="carousel slide">
+		<ol class="carousel-indicators">
+			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			<li data-target="#myCarousel" data-slide-to="1"></li>
+			<li data-target="#myCarousel" data-slide-to="2"></li>
+		</ol>
+		<div class="carousel-inner">
+			<div class="item active" style="background:#223240">
+				<img src="slide1.png" alt="第一张">
+			</div>
+			<div class="item" style="background:#F5E4DC;">
+				<img src="slide2.png" alt="第二张">
+			</div>
+			<div class="item" style="background:#DE2A2D;">
+				<img src="slide3.png" alt="第三张">
+			</div>
+		</div>
+		<a href="#myCarousel" data-slide="prev" class="carousel-control left">&lsaquo;</a>
+		<a href="#myCarousel" data-slide="next" class="carousel-control right">&rsaquo;</a>
+	</div>
+
+
+	<script src="jquery.min.js"></script>
+	<script src="bootstrap.min.js"></script>
+	<script type="text/javascript">
+		$(function () {
+
+			//轮播自动播放
+			$('#myCarousel').carousel({
+				//自动2秒播放
+				interval : 2000,
+			});
+
+			//设置垂直居中
+			$('.carousel-control').css('line-height', $('.carousel-inner img').height() + 'px');
+			$(window).resize(function () {
+				var $height = $('.carousel-inner img').eq(0).height() || 
+							  $('.carousel-inner img').eq(1).height() || 
+							  $('.carousel-inner img').eq(2).height();
+				$('.carousel-control').css('line-height', $height + 'px');
+			});
+
+		});
+	</script>
+	
+</body>
+</html>

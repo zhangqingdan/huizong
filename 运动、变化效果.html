@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>运动、变化效果</title>
+	<style>
+	body{
+		padding-left: 15%;
+		padding-right: 15%;
+		padding-top: 50px;
+
+	}
+	img{
+		height: 300px;
+		width: 500px;
+	}
+	button{
+		height: 30px;
+		font-size: 20px;
+		cursor: pointer;
+	}
+	button:hover{
+		background: orange;
+	}
+
+
+
+
+	</style>
+	<script src='jquery-3.1.1.js'></script>
+</head>
+<body>
+	<button id='show1'>显示</button>
+	<button id='hid1'>隐藏</button>
+
+	<button id='display1'>显示/隐藏</button>
+
+	<br><br>
+	<img id='img1' src="01.jpg" alt="">
+	<br><br><hr><br><br>
+
+	<button id='show2'>淡入</button>
+	<button id='hid2'>淡出</button>
+
+	<button id='display2'>淡入/淡出</button>
+	
+	<button id='display_to2'>淡化到</button>
+	<button id='display_back2'>还原</button>
+
+	<br>
+	<br>
+
+	<div id='div1' style="background:red;height:100px;width:100px;"></div>
+	<br>
+
+	<div id='div2' style="background:blue;height:100px;width:100px;"></div>
+	<br>
+
+	<div id='div3' style="background:orange;height:100px;width:100px;"></div>
+	<br>
+	<br>
+	<hr>
+
+	<button id='show3'>显示</button>
+	<button id='hid3'>隐藏</button>
+
+	<button id='display3'>显示/隐藏</button>
+
+	<br><br>
+	<img id='img3' src="01.jpg" alt="">
+
+	<br><br><hr><br><br>
+
+	<button id='animate'>开始动画</button>
+	<br><br>
+	<div  id='div4' style="background:orange;height:200px;width:200px;font-size:30px;">动画</div>
+	<br><br>
+	<button id='animate2'>开始动画</button>
+	<br><br>
+	<div  id='div5' style="background:orange;height:200px;width:200px;font-size:30px;">动画</div>
+	<br><br><hr><br><br>
+	<button id='stop6' style="height:50px;width:100px;font-size:30px;">停止</button>
+	<br>
+	<br>
+	<button id='button6' style="height:50px;width:900px;font-size:30px;">点此向上/向下展开</button>
+	<div id='div6' style="height:400px;width:900px;background:red;">我</div>
+	<br>
+	<br>
+	<hr>
+	<br>
+	<br>
+	<button id='button7'>点我</button>
+	<br>
+	<br>
+	<div id='div7' style="height:200px;width:400px;background:red;"></div>
+
+
+
+
+
+
+	<br><br>
+	<br><br>
+	<br><br>
+	<br><br>
+	<br><br>
+	<br><br>
+	<br><br>
+	<br><br>
+	<br><br>
+
+	
+
+
+
+
+
+	<script>
+
+	$(document).ready(function(){
+
+
+
+		$("#hid1").click(function(){
+		 	$("#img1").hide();
+		});
+		 	$("#show1").click(function(){
+		 	$("#img1").show();
+		});
+		$('#display1').click(function(){
+			$('#img1').toggle();
+		})
+
+
+
+		 $("#hid2").click(function(){
+		    $("#div1").fadeIn();
+		    $("#div2").fadeIn("slow");
+		    $("#div3").fadeIn(3000);
+		 });
+		$('#show2').click(function(){
+			$('#div1').fadeOut();
+			$('#div2').fadeOut('slow');
+			$('#div3').fadeOut(3000);
+		});
+		$("#display2").click(function(){
+		    $("#div1").fadeToggle();
+		    $("#div2").fadeToggle("slow");
+		    $("#div3").fadeToggle(3000);
+		 });
+		$("#display_to2").click(function(){
+		    $("#div1").fadeTo("slow",0.15);
+		    $("#div2").fadeTo("slow",0.5);
+		    $("#div3").fadeTo("slow",0.75);
+		 });
+		$("#display_back2").click(function(){
+		    $("#div1").fadeTo("slow",1);
+		    $("#div2").fadeTo("slow",1);
+		    $("#div3").fadeTo("slow",1);
+		 });
+
+
+
+
+		$('#show3').click(function(){
+			$('#img3').slideDown();
+		});
+		$('#hid3').click(function(){
+			$('#img3').slideUp();
+		});
+		$('#display3').click(function(){
+			$('#img3').slideToggle();
+		});
+
+
+
+		$('#animate').click(function(){
+			$('#div4').animate({height:'300px',width:'300px',fontSize:'100px'},1000)
+		});		
+		$('#animate2').click(function(){
+			$('#div5').animate({height:'300px'},1000,function(){
+				alert('长度变化完毕');
+			});
+			$('#div5').animate({width:'300px'},2000,function(){
+				alert('宽度变化完毕');
+			});
+			$('#div5').animate({fontSize:'100px'},3000,function(){
+				alert('字体变化完毕');
+			});
+		});
+
+
+		$('#button6').click(function(){
+			$('#div6').animate({fontSize:'100px'},1000,function(){
+				alert('字体变化完毕');
+			});
+			$('#div6').animate({height:'600px'},3000,function(){
+				alert('长度变化完毕');
+			});
+			$('#div6').slideToggle(3000);
+		});
+		$('#stop6').click(function(){
+			$('#div6').stop(true);
+		})
+
+
+
+		$('#button7').click(function(){
+			$('#div7').css('background','blue').animate({height:'600px'},3000,function(){
+				alert('长度变化完毕');
+			}).animate({width:'900px'},3000,function(){
+				alert('宽度变化完毕');
+			})
+		})
+
+
+
+	
+
+		
+
+
+
+
+
+
+	});
+
+
+
+
+
+
+
+	</script>
+	
+</body>
+</html>

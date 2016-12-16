@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>遍历</title>
+	<script src='jquery-3.1.1.js'></script>
+	<style>
+	body{
+		height: 1000px;
+	}
+
+	ol,ul{
+		width: 200px;
+		margin:50px auto;
+		border: 1px solid;
+		padding: 10px;
+	}
+	li{
+		height: 30px;
+		font-size: 20px;
+		margin-left: 40px;
+	}
+	button,input,a,p{
+		display: block;
+		margin:10px auto;
+		width: 400px;
+		height: 35px;
+		font-size: 20px;
+		cursor: pointer;
+
+	}
+	button:hover{
+		background: gray;
+		color: #fff;
+	}
+	
+
+
+
+
+	</style>
+
+</head>
+<body>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<div id='div1' style="width:800px;margin:30px;border:1px solid;padding:50px;float:left;">我是div1
+		<div id='div2' style="width:600px;margin:0 auto;border:1px solid;padding:50px;">我是div1内部的div2  
+			<ol>
+				<li class='li'>jQuery 遍历</li>
+				<li>jQuery 祖先</li>
+				<li>jQuery 后代</li>
+				<li class='li'>jQuery 同胞</li>
+				<li>jQuery 过滤</li>
+			</ol>
+			<div id='div3'>我是div2内部的div3</div>
+		</div>
+		<div id='div4'>我是div1内部的div4</div>
+		<h1>我是div1内部的H1标题</h1>
+		<h2>我是div1内部的H2标题</h2>
+		<h3>我是div1内部的H3标题</h3>
+		<h4>我是div1内部的H4标题</h4>
+		<div id='div5'>我是div1内部的div5</div>
+
+	</div>
+	<div style="width:500px;margin:30px;border:1px solid;padding:5px;float:left;">
+		<button id='button1'>点击改变 li 标签的parent属性</button>
+		<button id='button2'>点击改变 li 标签的parents属性</button>
+		<button id='button3'>点击改变 li 标签的parentsUntil属性</button>
+		<button id='button4'>点击改变 div1 children属性</button>
+		<button id='button5'>点击改变 div1 find()属性</button>
+		<button id='button6'>点击改变 div2 的同胞元素</button>
+		<button id='button7'>点击改变 div2 的同胞元素div</button>
+		<button id='button8'>点击改变 div4 的下一个同胞元素</button>
+		<button id='button9'>点击改变 div4 之后的同胞元素</button>
+		<button id='button10'>点击改变 div4 之后的直到 H2 同胞元素</button>
+		<button id='button11'>点击改变 h2 的上一个同胞元素</button>
+		<button id='button12'>点击改变 h2 之前的同胞元素</button>
+		<button id='button13'>点击改变 h2 之前的直到 div4 同胞元素</button>
+		<button id='button14'>点击改变第一个li</button>
+		<button id='button15'>点击改变最后一个li</button>
+		<button id='button16'>点击改变第三个li</button>
+		<button id='button17'>点击改变有类的li</button>
+		<button id='button18'>点击改变没有类的li</button>
+
+
+
+
+
+	</div>
+	
+	
+
+
+
+
+
+
+
+
+
+	
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+
+
+
+
+
+
+
+
+	<script>
+	$(document).ready(function(){
+		$('#button1').click(function(){
+			
+			$('li').parent().css({'border':'1px solid red'});
+		});
+		$('#button2').click(function(){
+			$('li').parents().css({'border':'1px solid red'});
+		});
+		$('#button3').click(function(){
+			$('li').parentsUntil("#div1").css({'border':'1px solid red'});
+		});
+		$('#button4').click(function(){
+			$('#div1').children().css({'border':'2px solid red'});
+		});
+		$('#button5').click(function(){
+			$('#div1').find('#div4').css({'border':'2px solid red'});
+		});
+		$('#button6').click(function(){
+			$('#div2').siblings().css({'border':'2px solid red'});
+		});
+		$('#button7').click(function(){
+			$('#div2').siblings('div').css({'border':'2px solid red'});
+		});
+		$('#button8').click(function(){
+			$('#div4').next().css({'border':'2px solid red'});
+		});
+		$('#button9').click(function(){
+			$('#div4').nextAll().css({'border':'2px solid red'});
+		});
+		$('#button10').click(function(){
+			$('#div4').nextUntil('h2').css({'border':'2px solid red'});
+		});
+		$('#button11').click(function(){
+			$('h2').prev().css({'border':'2px solid red'});
+		});
+		$('#button12').click(function(){
+			$('h2').prevAll().css({'border':'2px solid red'});
+		});
+		$('#button13').click(function(){
+			$('h2').prevUntil('#div4').css({'border':'2px solid red'});
+		});
+		$('#button14').click(function(){
+			$('li').first().css({'border':'2px solid red'});
+		});
+		$('#button15').click(function(){
+			$('li').last().css({'border':'2px solid red'});
+		});
+		$('#button16').click(function(){
+			$('li').eq(2).css({'border':'2px solid red'});
+		});
+		$('#button17').click(function(){
+			$('li').filter('.li').css({'border':'2px solid red'});
+		});
+		$('#button18').click(function(){
+			$('li').not('.li').css({'border':'2px solid red'});
+		});
+
+
+
+
+
+
+
+
+
+	})
+
+
+
+
+	</script>
+	
+</body>
+</html>

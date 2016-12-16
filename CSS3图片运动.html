@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS3运动</title>
+	<style>
+
+*{
+	margin: 0;
+	padding: 0;
+}
+figure{
+	position: relative;
+	width: 25%;
+	height: 300px;
+	overflow: hidden;
+	float: left;
+}
+figure img{
+	opacity: 0.8;
+}
+figcaption{
+	color: #fff;
+	position: absolute;
+}
+figure figcaption p,h2,div,span,img{
+	transition:all 0.35s;
+}
+@media screen and (min-width:1501px){
+	figure{width: 25%}
+}
+@media screen and (min-width: 1001px) and (max-width:1500px){
+	figure{width: 33.333%}
+}
+@media screen and (min-width: 501px) and (max-width:1000px){
+	figure{width: 50%}
+}
+@media screen and (max-width:500px){
+	figure{width: 100%}
+}
+
+
+.test1{
+	background: #C1FFC1;
+}
+.test1 figcaption{
+	top: 50px;
+	left: 30px;
+}
+.test1 figcaption p{
+	background: #fff;
+	color: gray;
+	margin: 3px;
+	text-align: center;
+	transform:translate(-130px,0);
+}
+.test1:hover figcaption p{
+	transform:translate(-0,0);
+
+}
+.test1:hover figcaption p:nth-of-type(1){
+	transition-delay:0.05s;
+}
+.test1:hover figcaption p:nth-of-type(2){
+	transition-delay:0.1s;
+}
+.test1:hover figcaption p:nth-of-type(3){
+	transition-delay:0.15s;
+}
+.test1:hover img{
+	transform:translate(-20px,0);
+	opacity: 0.5;
+}
+
+
+
+.test2{
+	background: #FFC1C1;
+}
+.test2 figcaption{
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+.test2 figcaption h2{
+	margin-top: 15%;
+	margin-left: 15%;
+}
+.test2 figcaption p{
+	margin-left: 15%;
+}
+.test2 figcaption div{
+	height: 80%;
+	width: 80%;
+	border: 2px solid;
+	position: absolute;
+	left: 10%;
+	top: 10%;
+	transform:translate(0,-400px) rotate(0deg);
+}
+.test2 figcaption p{
+	transform:translate(0,50px) ;
+	opacity: 0;
+}
+.test2:hover figcaption div{
+	transform:translate(0,0) rotate(360deg);
+
+}
+.test2:hover img{
+	transform:translate(-20px,0);
+	opacity: 0.5;
+}
+.test2:hover figcaption p{
+	transform:translate(0,0) ;
+	opacity: 1;
+}
+
+
+.test3{
+	background: #FFDAB9;
+}
+.test3 figcaption{
+	color: gray;
+	top: 15%;
+	left: 15%;
+}
+.test3 figcaption h2{
+	transform:skew(90deg);
+}
+.test3 figcaption p{
+	transform:skew(90deg);
+}
+.test3:hover figcaption h2{
+	transform:skew(0);
+}
+.test3:hover figcaption p{
+	transform:skew(0);
+	transition-delay:0.2s;
+}
+.test3:hover img{
+	transform:translate(-20px,0);
+	opacity: 0.5;
+}
+
+
+.test4{
+	background: #E0EEE0;
+}
+.test4 figcaption{
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+.test4 figcaption h2{
+	margin-top: 15%;
+	margin-left: 15%;
+	transform:scale(1.2);
+	opacity: 0;
+}
+.test4 figcaption p{
+	transform:scale(1.2);
+	margin-left: 15%;
+	opacity: 0;
+}
+.test4 figcaption div{
+	height: 80%;
+	width: 80%;
+	border: 2px solid;
+	position: absolute;
+	left: 10%;
+	top: 10%;
+	transform:scale(1.2);
+	opacity: 0;
+}
+.test4:hover figcaption div{
+	transform:scale(1);
+	opacity: 1;
+}
+.test4:hover img{
+	transform:scale(1.2,1.2);
+	opacity: 0.5;
+}
+.test4:hover h2{
+	transform:scale(1);
+	opacity: 1;
+}
+.test4:hover p{
+	transform:scale(1);
+	opacity: 1;
+}
+
+
+
+.test5{
+	background: #FFC1C1;
+}
+.test5 figcaption{
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+.test5 figcaption h2{
+	margin-top: 30%;
+	margin-left: 30%;
+	transform:scale(0.5);
+	opacity: 0;
+}
+.test5 figcaption p{
+	margin-left: 30%;
+	transform:scale(0.5);
+	opacity: 0;
+}
+.test5 figcaption #fir{
+	height: 20%;
+	width: 60%;
+	border-left: 1px solid;
+	border-right: 1px solid;
+	position: absolute;
+	left: 20%;
+	top: 40%;
+	opacity: 0;
+}
+.test5 figcaption #sec{
+	height: 60%;
+	width: 20%;
+	border-top: 1px solid;
+	border-bottom: 1px solid;
+	position: absolute;
+	left: 40%;
+	top: 20%;
+	opacity: 0;
+}
+.test5:hover figcaption #fir{
+	opacity: 1;
+	transform:scale(1,4);
+
+}
+.test5:hover figcaption #sec{
+	opacity: 1;
+	transform:scale(4,1);
+
+}
+.test5:hover figcaption h2{
+	opacity: 1;
+	transform:scale(1);
+}
+.test5:hover figcaption p{
+	opacity: 1;
+	transform:scale(1);
+}
+.test5:hover img{
+	transform:scale(1.2,1.2);
+	opacity: 0.5;
+}
+
+
+
+.test6{
+	background: #2E8B57;
+}
+.test6 figcaption{
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+.test6 figcaption h2{
+	margin-top: 30%;
+	margin-left: 30%;
+	opacity: 0;
+	transform:scale(0);
+	transform:rotate(0);
+}
+.test6 figcaption p{
+	margin-left: 30%;
+	opacity: 0;
+	transform:scale(0);
+	transform:rotate(0);
+}
+.test6 figcaption div{
+	height: 80%;
+	width: 80%;
+	border: 2px solid;
+	position: absolute;
+	left: 10%;
+	top: 10%;
+	transform:scale(0);
+	opacity: 0;
+	transform:rotate(0);
+}
+.test6:hover figcaption h2{
+	transform:scale(1);
+	opacity: 1;
+	transform:rotate(360deg);
+}
+.test6:hover figcaption p{
+	transform:scale(1);
+	opacity: 1;
+	transform:rotate(360deg);
+}
+.test6:hover figcaption div{
+	transform:scale(1);
+	opacity: 1;
+	transform:rotate(360deg);
+}
+.test6:hover img{
+	transform:rotate(360deg);
+	opacity: 0.5;
+}
+
+
+.test7{
+	background: #FFF8DC;
+}
+.test7 figcaption{
+	color: #000;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index:90;
+}
+.test7 figcaption h2{
+	margin-left: 70%;
+	margin-top:100%;
+	opacity: 0;
+}
+.test7 figcaption p{
+	margin-left: 70%;
+	opacity: 0;
+}
+.test7 div{
+	height: 200px;
+	width: 150%;
+	background: #fff;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	z-index: 5;
+}
+.test7:hover div{
+	transform: rotate(-20deg);
+	transform-origin:0 0;
+	z-index: 5;
+}
+.test7:hover figcaption h2{
+	margin-top:220px;
+	opacity: 1;
+}
+.test7:hover figcaption p{
+	opacity: 1;
+}
+.test7:hover img{
+	opacity: 0.5;
+}
+
+
+
+.test8{
+	background: #FFF8DC;
+}
+.test8 figcaption{
+	color: #000;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index:90;
+}
+.test8 figcaption h2{
+	margin-left: 5%;
+	margin-top:100%;
+	opacity: 0;
+}
+.test8 figcaption p{
+	margin-left: 5%;
+	opacity: 0;
+}
+.test8 div{
+	height: 200px;
+	width: 100%;
+	background: #fff;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	z-index: 5;
+}
+.test8:hover div{
+	transition-delay:0.05s;
+	position: absolute;
+	top: 70%;
+	z-index: 5;
+}
+.test8:hover figcaption h2{
+	margin-top:220px;
+	opacity: 1;
+}
+.test8:hover figcaption p{
+	opacity: 1;
+}
+.test8:hover img{
+	opacity: 0.5;
+}
+
+
+
+
+
+
+
+
+
+	</style>
+</head>
+<body>
+	<figure class='test1'>
+		<img src="01.jpg" alt="">
+		<figcaption>
+			<h2>滑动动画</h2>
+			<p>图片详解1</p>
+			<p>图片详解2</p>
+			<p>图片详解3</p>
+
+		</figcaption>
+	</figure>
+	<figure class='test2'>
+		<img src="02.jpg" alt="">
+		<figcaption>
+			<h2>旋转动画</h2>
+			<p>飞来飞去，飞舞</p>
+			<div></div>
+		</figcaption>
+	</figure>
+	<figure class='test3'>
+		<img src="03.jpg" alt="">
+		<figcaption>
+			<h2>斜切动画</h2>
+			<p>斜切动画图片详解</p>
+		</figcaption>
+	</figure>
+	<figure class='test4'>
+		<img src="04.jpg" alt="">
+		<figcaption>
+			<h2>缩放效果</h2>
+			<p>图片详解</p>
+			<div></div>
+		</figcaption>
+	</figure>
+	<figure class='test5'>
+		<img src="05.jpg" alt="">
+		<figcaption>
+			<h2>井字格</h2>
+			<p>图片详解</p>
+			<div id='fir'></div>
+			<div id='sec'></div>
+		</figcaption>
+	</figure>
+	<figure class='test6'>
+		<img src="06.jpg" alt="">
+		<figcaption>
+			<h2>中心散发</h2>
+			<p>图片详解</p>
+			<div></div>
+		</figcaption>
+	</figure>
+	<figure class='test7'>
+		<img src="07.jpg" alt="">
+		<figcaption>
+			<h2>转动滑出</h2>
+			<p>图片详解</p>
+		</figcaption>
+		<div></div>
+	</figure>
+	<figure  class='test8'>
+		<img src="08.jpg" alt="">
+		<figcaption>
+			<h2>滑动滑出</h2>
+			<p>图片详解图片详解图片详解图片详解图片详解图片详解图片详解图片详解</p>
+		</figcaption>
+		<div></div>
+	</figure >
+	<figure>
+		<img src="09.jpg" alt="">
+		<figcaption>
+			<h2>图片标题</h2>
+			<p>图片详解</p>
+		</figcaption>
+	</figure>
+	<figure>
+		<img src="10.jpg" alt="">
+		<figcaption>
+			<h2>图片标题</h2>
+			<p>图片详解</p>
+		</figcaption>
+	</figure>
+	<figure>
+		<img src="011.jpg" alt="">
+		<figcaption>
+			<h2>图片标题</h2>
+			<p>图片详解</p>
+		</figcaption>
+	</figure>
+	<figure>
+		<img src="012.jpg" alt="">
+		<figcaption>
+			<h2>图片标题</h2>
+			<p>图片详解</p>
+		</figcaption>
+	</figure>
+</body>
+</html>

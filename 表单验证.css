@@ -1,0 +1,158 @@
+
+*{
+	margin: 0;
+	padding: 0;
+	font-family: '微软雅黑';
+	font-weight: 300;
+}
+
+
+.container{
+	width: 960px;
+	height: 500px;
+	border: 1px solid gray;
+	margin: 100px auto;
+	box-shadow: 2px 2px 5px gray;
+	padding: 50px;
+	box-sizing:border-box;
+}
+.container_1_left{
+	float: left;
+}
+.container_1_left>img{
+	display: block;
+	float: right;
+	margin-top: -5px;
+	margin-left: 30px;
+}
+.container_1_right{
+	width: 500px;
+	padding-top: 5px;
+
+	float: right;
+	line-height: 25px;
+}
+.container_1{
+	height: 50px;
+	margin: 15px 0;
+}
+.container_1 input{
+	/*display: block;*/
+	height: 35px;
+	font-size: 14px;
+	box-sizing:border-box;
+	padding-left: 5px;
+	width: 250px;
+
+}
+#ex{
+	width: 80px;
+
+}
+.span{
+	/*margin-top: -10px;*/
+	padding-left: 100px;
+}
+.span span{
+	height: 20px;
+
+	/*display: block;*/
+	padding: 2px 25px;
+	width: 50px;
+	
+	line-height: 20px;
+	font-size: 13px;
+	color: #fff;
+	margin-top: 5px;
+}
+
+.container_1_left>span{
+	display: block;
+	float: left;
+	width: 100px;
+	text-align: right;
+	height: 35px;
+	font-size: 16px;
+	line-height: 35px;
+
+}
+.container_1_left>p{
+	padding-left: 100px;
+	font-size: 13px;
+	margin-top: 3px;
+	margin-left: 5px;
+	color: gray;
+
+}
+.container_span{
+	display: inline;
+	float: left;
+	font-size: 16px;
+	font-family:'微软雅黑';
+}
+
+.ati{
+	background: url(1.png);
+	height: 30px;
+	width: 30px;
+	margin-top: -5px;
+	margin-left: -5px;
+	display: block;
+	background-size: cover;
+	float: left;
+	margin-right: 5px;
+	border-radius: 50%;
+
+}
+.ri{
+	background: url(2.png);
+	height: 20px;
+	width: 20px;
+	margin-top: 2px;
+	display: block;
+	background-size: cover;
+	float: left;
+	margin-right: 10px;
+	border-radius: 50%;
+
+}
+.wr{
+	background: url(3.png);
+	height: 20px;
+	width: 20px;
+	margin-top: 2px;
+	display: block;
+	background-size: cover;
+	float: left;
+	margin-right: 10px;
+	border-radius: 50%;
+
+}
+.on{
+	background: url(5.png);
+	height: 20px;
+	width: 20px;
+	margin-top: 5px;
+	display: block;
+	background-size: cover;
+	float: left;
+	margin-right: 10px;
+	border-radius: 50%;
+	cursor: pointer;
+
+}
+button{
+	display: block;
+	height: 30px;
+	width: 100px;
+	font-size: 18px;
+	background: rgb(255,184,0);
+	margin-left: 200px;
+	margin-top: 50px;
+	cursor: pointer;
+	color: #fff;
+}
+button:hover{
+	background: rgb(247,134,0);
+	
+}

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>关于HTML</title>
+	<script src='jquery-3.1.1.js'></script>
+	<style>
+
+	ol,ul{
+		width: 200px;
+		margin:50px auto;
+		border: 1px solid;
+		padding: 10px;
+	}
+	li{
+		height: 30px;
+		font-size: 20px;
+		margin-left: 40px;
+	}
+	button,input,a,p{
+		display: block;
+		margin:10px auto;
+		width: 400px;
+		height: 35px;
+		font-size: 20px;
+		cursor: pointer;
+
+	}
+	button:hover{
+		background: gray;
+		color: #fff;
+	}
+	.color{
+		color:red;
+	}
+	.important{
+		font-weight: 800;
+	}
+	#div1{
+		width: 500px;
+		height: 500px;
+		margin: 100px auto;
+		border: 100px solid;
+		padding: 50px;
+		box-sizing:border-box;
+		font-size: 25px;
+
+	}
+
+
+
+
+	</style>
+
+</head>
+<body>
+	<ol>
+		<li>jQuery 获取</li>
+		<li>jQuery 设置</li>
+		<li>jQuery 添加</li>
+		<li>jQuery 删除</li>
+		<li>jQuery CSS 类</li>
+		<li>jQuery css()</li>
+		<li>jQuery 尺寸</li>
+
+	</ol>
+	<button id='button1'>点击显示 ol 标签的文本内容</button>
+	<button id='button5'>点击改变 ol 标签的文本内容</button>
+	<button id='button9'>点击显示 ol 标签的旧新文本内容</button>
+
+	<button id='button2'>点击显示 ol 标签的所有内容</button>
+	<button id='button6'>点击改变 ol 标签的所有内容</button>
+	<button id='button10'>点击显示 ol 标签的所有旧新内容</button>
+
+
+
+	<br>
+	<br>
+	<br><hr>
+
+
+	<input type="text" value='我是value'>
+	<button id='button3'>点击显示 input 标签的value</button>
+	<button id='button7'>点击改变 input 标签的value</button>
+
+
+
+	<br>
+	<br>
+	<br><hr>
+	<a href="https://www.baidu.com/">百度</a>
+	<button id='button4'>点击显示 百度 的网址</button>
+	<button id='button8'>点击改变 百度 为 360</button>
+	<button id='button11'>点击改变 百度 为 百度糯米</button>
+
+
+	<br>
+	<br>
+	<br><hr>
+
+
+	<ul>
+		<li>第一项</li>
+		<li>第二项</li>
+		<li>第三项</li>
+		<li>第四项</li>
+
+	</ul>
+	<button id='button12'>点击为ul最后添加一项</button>
+	<button id='button13'>点击为ul最前添加一项</button>
+	
+
+
+	<br>
+	<br>
+	<br>
+
+
+	<p>第一句话<b style="background:red;">第一句话</b>第一句话</p>
+	<button id='button14'>点击为p前面添加一项</button>
+	<button id='button15'>点击为p后面添加一项</button>
+	<button id='button16'>点击移除p(p标签不在)</button>
+	<button id='button17'>点击清空p(p标签还在)</button>
+	<button id='button18'>点击为元素添加类</button>
+	<button id='button19'>点击移除元素添加类</button>
+	<button id='button20'>点击为元素/移除元素添加类</button>
+	<button id='button21'>点击弹出b的背景颜色</button>
+	<button id='button22'>点击弹出p设置样式</button>
+
+
+
+
+
+
+
+
+
+	<br>
+	<br>
+	<hr>
+	<div id='div1'>width: 500px;<br>
+		height: 500px;<br>
+	
+		border: 100px solid;<br>
+		padding: 50px;<br>
+		</div>
+	<button id='button23'>点击弹出DIV的width+height</button>
+	<button id='button24'>点击弹出DIV的innerWidth+innerHeight</button>
+	<button id='button25'>点击弹出DIV的outerWidth+outerHeight</button>
+	<button id='button26'>点击弹出浏览器视口的width+height</button>
+	<button id='button27'>点击改变弹出DIV的width+height</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+
+
+
+
+
+
+
+
+	<script>
+	$(document).ready(function(){
+		$('#button1').click(function(){
+			alert($('ol').text());
+		});
+		$('#button2').click(function(){
+			alert($('ol').html());
+		});
+		$('#button3').click(function(){
+			alert($('input').val());
+		});
+		$('#button4').click(function(){
+			alert($('a').attr('href'));
+		});
+		$('#button5').click(function(){
+			$('ol').text('<h1>我是一号标题</h1><h2>我是2号标题</h2>');
+		});
+		$('#button6').click(function(){
+			$('ol').html('<h1>我是一号标题</h1><h2>我是2号标题</h2>');
+		});
+		$('#button7').click(function(){
+			$('input').val('我是新的value值');
+		});
+		$('#button8').click(function(){
+			$('a').attr({'href':'http://wan.360.cn/?src=hao-mz-top01',
+							'style':'color:red'});
+			$('a').html('360');
+
+		});
+		$('#button9').click(function(){
+			$('ol').text(function(i,origText){
+				return "Old text: " + origText + " New text: Hello world! (index: " + i + ")";
+			});
+		});
+		$('#button10').click(function(){
+			$('ol').html(function(i,origText){
+				return "Old html: " + origText + " New html: Hello world! (index: " + i + ")";
+			});
+		});
+		$('#button11').click(function(){
+			$('a').val('href',function(i,origText){
+				return origText+'/cps/show/goto?mallid=112&product_id=0&disable_goto_flag=0&url=0f9bYyARgjCnh46dUPwkAUHCzuJjA3nL8b%252FmegmCVpcSyQXS%252F8LQHXjeENXBZ9qlgw4&sharekey=&statkey=zw_super_m_112&vip_frm=super_mynav'
+			});
+			$('a').html('百度糯米');
+		});
+		$('#button12').click(function(){
+			$('ul').append('<li>第N项</li>');
+		});
+		$('#button13').click(function(){
+			$('ul').prepend('<li>第N项</li>');
+		});
+		$('#button14').click(function(){
+			$('p').before('<p>新的段落</p>');
+		});
+		$('#button15').click(function(){
+			$('p').css('color','red').after('<p>新的段落</p>');
+		});
+		$('#button16').click(function(){
+			$('p').remove();
+		});
+		$('#button17').click(function(){
+			$('p').empty();
+		});
+		$('#button18').click(function(){
+			$('p').addClass('important color');
+			$('b').addClass('color');
+		});
+		$('#button19').click(function(){
+			$('p').removeClass('important color');
+			$('b').removeClass('color');
+		});
+		$('#button20').click(function(){
+			$('p').toggleClass('important color');
+			$('b').toggleClass('color');
+		});
+		$('#button21').click(function(){
+			alert($('b').css('background-color'));
+		});
+		$('#button22').click(function(){
+			$('p').css({'background-color':'blue','font-size':'25px'});
+		});
+		$('#button23').click(function(){
+			alert('width:'+$('#div1').width()+"--"+"height:"+$('#div1').height());
+		});
+		$('#button24').click(function(){
+			alert('width:'+$('#div1').innerWidth()+"--"+"height:"+$('#div1').innerHeight());
+		});
+		$('#button25').click(function(){
+			alert('width:'+$('#div1').outerWidth(true)+"--"+"height:"+$('#div1').outerHeight(true));
+		});
+		$('#button26').click(function(){
+			alert('width:'+$(window).width()+"--"+"height:"+$(window).height());
+		});
+		$('#button27').click(function(){
+			$('#div1').width(300).height(300);
+		});
+
+
+
+
+
+
+
+
+
+
+	})
+
+
+
+
+	</script>
+	
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>下拉菜单</title>
+	<style>
+
+	*{
+		margin: 0;
+		padding: 0;
+	}
+
+	body{
+		padding-top: 50px;
+	}
+	nav{
+		height: 60px;
+		width: 960px;
+		background: gray;
+		margin: 0 auto;
+		padding: 10px 30px;
+		box-sizing:border-box;
+		border-radius: 15px;
+	}
+	nav>ul>li{
+		list-style: none;
+		display: block;
+		float: left;
+		height: 40px;
+		padding: 0 40px;
+		line-height: 40px;
+		text-align: center;
+		font-size: 30px;
+		font-family: '微软雅黑';
+		/*background: red;*/
+		/*font-weight: bold;*/
+		/*overflow: hidden;*/
+		color: #fff;
+	}
+
+	nav>ul>li:hover{
+		color: orange;
+		/*overflow: visible;*/
+		/*background: blue;*/
+	}
+	nav>ul>li:hover .hid{
+		display: block;
+	}
+	.hid{
+		width: 100%;
+		/*background:#CFCFCF;*/
+		margin-top: 10px;
+		border: 1px solid gray;
+		display: none;
+		/*padding: 10px;*/
+	}
+	.hid>li{
+		display: block;
+		height: 35px;
+		font-size: 25px;
+		color: gray;
+		padding: 2px 10px;
+	}
+	.hid>li:hover{
+		background: #E8E8E8;
+	}
+
+
+
+
+	</style>
+</head>
+<body>
+	<nav>
+		<ul>
+			<li class='contains' >新 闻
+				<ol class='hid'>
+					<li>随时随地</li>
+					<li>随时随地</li>
+					<li>随时随地</li>
+					<li>随时随地</li>
+
+				</ol>
+
+			</li>
+			<li class='contains'>视 频</li>
+			<li class='contains'>音 乐</li>
+			<li class='contains'>图 片</li>
+			<li class='contains'>地 图</li>
+
+
+		</ul>
+	</nav>
+</body>
+<script>
+	
+	
+	
+
+
+
+</script>
+</html>
